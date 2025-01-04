@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="langToggle">FR</button>
+    <div class="container">
+        <div id="quiz">
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <div class="quiz-header">
+                <div id="progressText">Question 1/25</div>
+                <div id="timer-container">
+                    <span class="timer-text">Time left:</span> <span id="timer">10</span>s
+                </div>
+            </div>
+            <h1>General Knowledge Quiz</h1>
+            <div id="question"></div>
+            <div id="choices"></div>
+            <div id="explanation" class="hide"></div>
+            <button id="submit">Submit Answer</button>
+            <div id="result" class="hide">
+                <div id="score"></div>
+                <div id="result-gif"></div>
+                <button id="restart">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,224 @@
+:root {
+    --lilac: #C8B6FF;
+    --pale-blue: #B8E3FF;
+    --dark-lilac: #9F90D9;
+    --gradient-1: linear-gradient(135deg, var(--lilac) 0%, var(--pale-blue) 100%);
+    --gradient-2: linear-gradient(135deg, var(--dark-lilac) 0%, var(--lilac) 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px;
+}
+
+#quiz {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--pale-blue);
+    border-radius: 15px;
+}
+
+#timer-container {
+    background: var(--dark-lilac);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    background: var(--gradient-2);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.choice-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border: 2px solid var(--lilac);
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.choice-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: var(--pale-blue);
+}
+
+.choice-btn.selected {
+    background: var(--gradient-2);
+    color: white;
+    border-color: transparent;
+}
+
+#langToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#langToggle:hover {
+    background: var(--lilac);
+    color: white;
+}
+
+#submit {
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: var(--dark-lilac);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#timer.warning {
+    color: #ff4444;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+#progressText {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+}
+
+#result {
+    text-align: center;
+    padding: 20px;
+}
+
+#result-gif {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#result-gif img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+#restart {
+    display: none;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#restart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#score {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-lilac);
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+#score br + * {
+    color: #9F90D9;
+    font-size: 1.1rem;
+}
+
+#result {
+    text-align: center;
+    padding: 20px;
+}
+
+#restart {
+    display: none;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background: var(--gradient-2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#restart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+} 
